@@ -1,3 +1,12 @@
+#Использовал как фейк-бэкенд бибилиотеку json-server с исходниками в https://github.com/thewwiing/flats-back
+#Фронт запускал с порта 3000, бэкенд с порта 9999
+
+#Так как в приложении нет авотризации, то сохранял избранные в local storage и redux.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
