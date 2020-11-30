@@ -1,0 +1,106 @@
+.flat-item {
+  position: relative;
+  margin: 0 20px 20px 0;
+  padding: 20px;
+
+  width: 300px;
+  height: 370px;
+
+  background: rgba(229, 229, 229, .5);
+  @include Transition(.2s);
+  @include BorderRadius(4px);
+  @include DisplayFlexCustom(column);
+
+  cursor: pointer;
+
+  &__img {
+    width: 100%;
+    height: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      @include Object-fit(cover);
+
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding-top: 10px;
+
+    &-main {
+      h2 {
+        font-size: 16px;
+        color: #2a81dd;
+        font-weight: 500;
+      }
+
+      h3 {
+        margin-top: 2px;
+        color: #1c1819;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      h2,
+      h3 {
+        @include ShorttedTextInOneRow;
+      }
+    }
+
+    &-details {
+      margin: 15px 0;
+      color: #1c1819;
+      &-item {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        @include DisplayFlexCustom(null, space-between);
+
+        span:first-child {
+
+        }
+        span:last-child {
+          font-weight: 500;
+          margin-left: 10px;
+
+          &.name {
+            max-width: 180px;
+            @include ShorttedTextInOneRow;
+          }
+        }
+      }
+    }
+
+    &-city {
+      padding-top: 5px;
+      border-top: 1px solid gray;
+
+      font-size: 14px;
+      font-weight: 400;
+
+      color: gray;
+    }
+
+  }
+
+  &__like {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &:hover {
+    @include Box-shadow-single(0px 0px 20px rgba(0, 0, 0, 0.13));
+  }
+
+
+}
+
+@media only screen and (max-width: 576px) {
+  .flat-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
